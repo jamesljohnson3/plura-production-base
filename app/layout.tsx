@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { DM_Sans } from 'next/font/google'
 import './globals.css'
 import { ClerkProvider } from '@clerk/nextjs'
 import { dark } from '@clerk/themes'
@@ -9,7 +8,6 @@ import { Toaster } from '@/components/ui/toaster'
 import { Toaster as SonnarToaster } from '@/components/ui/sonner'
 import siteMetadata from "@/app/utils/siteMetaData";
 
-const font = DM_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: siteMetadata.title,
@@ -26,7 +24,7 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
     >
-      <body className={font.className}>
+      <body className=''>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
